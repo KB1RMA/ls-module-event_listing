@@ -1,0 +1,15 @@
+﻿<? Phpr_View::beginBlock("head") ?>
+
+<? Phpr_View::endBlock() ?>
+ 
+<? Phpr_View::beginBlock("view") ?>
+	<?= flash() ?>
+	
+	<div class="list_controlPanel">
+		<?= backend_button('Create post', url('/eventlisting/events/create')) ?>
+		<div class="clear"></div>
+	</div>
+	
+	<?= $this->listRender() ?>
+	
+<? Phpr_View::endBlock() ?>
