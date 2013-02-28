@@ -17,7 +17,7 @@ class EventListing_Event extends Db_ActiveRecord {
 		$this->define_column('start_date', 'Event Start Date')->validation()->required('Please specify a date for the event');
 		$this->define_column('end_date', 'Event End Date');
 		$this->define_column('description', 'Description');
-		$this->define_column('event_url', 'Registration URL');
+		$this->define_column('event_url', 'Registration URL')->validation()->url('Must be a valid url!');
 		$this->define_column('short_description', 'Short Description');
 		
 	}
